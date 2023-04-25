@@ -1,5 +1,6 @@
 // Import the required modules
 const http = require('http');
+const port = process.env.PORT | 8080;
 
 // Create a server object
 const server = http.createServer((req, res) => {
@@ -11,6 +12,6 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-server.listen(3000, () => {
-  console.log('Server listening on port 3000');
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
